@@ -1,9 +1,25 @@
 package br.com.tranquilotech.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name ="TB_FUNCIONARIO")
+@SequenceGenerator(name="funcionario",sequenceName = "tb_funcionario_id_funcionario_seq",allocationSize = 1)
 public class Funcionario {
-    private String nome;
-    private Integer horasTrabalhadas;
-    private Double valorPagoHora;
+    @Id
+    @Column(name="id_funcionario")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "funcionario")
+    protected int id;
+
+    @Column(name="nome_funcionario",length = 255,nullable = false)
+    protected String nome;
+
+    @Column(name = "horas_trabalhadas",nullable = false)
+    protected Integer horasTrabalhadas;
+
+    @Transient
+    @Column(name = "valor_pago_hora",nullable = false)
+    protected Double valorPagoHora;
 
     public Funcionario() {
     }
@@ -13,7 +29,7 @@ public class Funcionario {
         this.horasTrabalhadas = horasTrabalhadas;
         this.valorPagoHora = valorPagoHora;
     }
-
+    public int getId(){return id;}
     public String getNome() {
         return nome;
     }
