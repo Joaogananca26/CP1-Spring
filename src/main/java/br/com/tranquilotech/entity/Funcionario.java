@@ -9,7 +9,7 @@ public class Funcionario {
     @Id
     @Column(name="id_funcionario")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "funcionario")
-    protected int id;
+    protected Integer id;
 
     @Column(name="nome_funcionario",length = 255,nullable = false)
     protected String nome;
@@ -17,7 +17,6 @@ public class Funcionario {
     @Column(name = "horas_trabalhadas",nullable = false)
     protected Integer horasTrabalhadas;
 
-    @Transient
     @Column(name = "valor_pago_hora",nullable = false)
     protected Double valorPagoHora;
 
@@ -29,7 +28,15 @@ public class Funcionario {
         this.horasTrabalhadas = horasTrabalhadas;
         this.valorPagoHora = valorPagoHora;
     }
-    public int getId(){return id;}
+
+    @PostPersist
+    private void executar(){
+        System.out.println("Executando método... ");
+    }
+
+    public int getId(){
+        return id;
+    }
     public String getNome() {
         return nome;
     }
