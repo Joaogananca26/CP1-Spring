@@ -34,6 +34,14 @@ Sobrescrita dos métodos calcularSalario e imprimirInformacao para tratar as esp
 
 @Coluna(nome="NOME_FUNCIONARIO"): Define o nome das colunas no banco de dados.
 
+@Id: Define a chave primária da tabela.
+
+@GeneratedValue: Define a estratégia de geração automática de valores para a chave primária.
+
+@SequenceGenerator: Define um gerador de sequência para a chave primária.
+
+@PostPersist: Método anotado será executado após a persistência de uma entidade.
+
 # Funcionalidades:
 
 Cálculo de salários baseado nas horas trabalhadas e no valor por hora.
