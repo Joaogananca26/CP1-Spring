@@ -27,3 +27,46 @@ Sobrescrita dos métodos calcularSalario e imprimirInformacao para tratar as esp
 
 Representa um funcionário com um bônus adicional para cada 10 horas trabalhadas.
 Sobrescrita dos métodos calcularSalario e imprimirInformacao para tratar as especificidades do salário e informações.
+
+# Anotações Personalizadas:
+
+@Tabela(nome="TAB_FUNCIONARIO"): Define o nome da tabela no banco de dados.
+
+@Coluna(nome="NOME_FUNCIONARIO"): Define o nome das colunas no banco de dados.
+
+# Funcionalidades:
+
+Cálculo de salários baseado nas horas trabalhadas e no valor por hora.
+
+Exibição de informações dos funcionários.
+
+Implementação de perfis diferentes de funcionários.
+
+Geração automática de comandos SQL via API Reflection.
+
+Integração com Hibernate para manipulação de dados no banco Oracle.
+
+Exibição dos comandos SQL gerados durante as operações CRUD.
+
+# Configuração e Execução:
+
+### Configuração do Banco de Dados
+
+Certifique-se de que você possui um banco de dados Oracle SQL Developer configurado corretamente.
+
+### Configuração do Hibernate
+
+No arquivo persistence.xml, configure as credenciais do banco de dados:
+
+### Execução do Projeto
+
+Clone este repositório.
+
+Configure as dependências do Hibernate no pom.xml (se estiver usando Maven).
+
+Compile e execute o programa principal (Main.java).
+
+# Exemplo de Saída:
+
+Ao cadastrar um novo funcionário, o sistema exibirá a consulta SQL gerada,
+e também será possível visualizar as informações do funcionário.
