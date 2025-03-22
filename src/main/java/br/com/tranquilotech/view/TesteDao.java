@@ -12,7 +12,7 @@ import javax.persistence.Persistence;
 
 public class TesteDao {
     public static void main(String[] args) {
-        EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("CLIENTE_ORACLE");
+        EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("FUNCIONARIO_ORACLE");
 
         EntityManager em = fabrica.createEntityManager();
 

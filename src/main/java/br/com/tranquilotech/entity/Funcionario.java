@@ -34,6 +34,10 @@ public class Funcionario {
         System.out.println("Executando método... ");
     }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public int getId(){
         return id;
     }
