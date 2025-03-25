@@ -5,6 +5,7 @@ import br.com.tranquilotech.dao.FuncionarioDAOImpl;
 import br.com.tranquilotech.entity.Funcionario;
 import br.com.tranquilotech.exceptions.CommitException;
 import br.com.tranquilotech.exceptions.FuncionarioNaoEncontradoException;
+import br.com.tranquilotech.service.SqlGenerator;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -16,7 +17,7 @@ public class TesteDao {
 
         EntityManager em = fabrica.createEntityManager();
 
-        FuncionarioDAO funcionarioDAO = new FuncionarioDAOImpl(em);
+        FuncionarioDAO funcionarioDAO = new FuncionarioDAOImpl(em, new SqlGenerator());
 
         Funcionario funcionario1 = new Funcionario("Tranquilo", 106, 27.0);
 
