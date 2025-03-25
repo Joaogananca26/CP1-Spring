@@ -12,7 +12,7 @@ public class TesteRemocao {
 
         EntityManager em = fabrica.createEntityManager();
 
-        Funcionario funcionario = em.find(Funcionario.class, 5);
+        Funcionario funcionario = em.find(Funcionario.class, 23);
 
         em.remove(funcionario);
 
