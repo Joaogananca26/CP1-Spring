@@ -1,23 +1,32 @@
 package br.com.tranquilotech.entity;
 
+import br.com.tranquilotech.annotations.Coluna;
+import br.com.tranquilotech.annotations.Tabela;
+
 import javax.persistence.*;
 
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Entity
 @Table(name ="TB_FUNCIONARIO")
+@Tabela(nome = "TB_FUNCIONARIO")
 @SequenceGenerator(name="funcionario",sequenceName = "tb_funcionario_id_funcionario_seq",allocationSize = 1)
 public class Funcionario {
     @Id
     @Column(name="id_funcionario")
+    @Coluna(nome="id_funcionario")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "funcionario")
     protected Integer id;
 
     @Column(name="nome_funcionario",length = 255,nullable = false)
+    @Coluna(nome="nome_funcionario",tamanho = 255,obrigatorio = false)
     protected String nome;
 
     @Column(name = "horas_trabalhadas",nullable = false)
+    @Coluna(nome = "horas_trabalhadas",obrigatorio = false)
     protected Integer horasTrabalhadas;
 
     @Column(name = "valor_pago_hora",nullable = false)
+    @Coluna(nome = "valor_pago_hora",obrigatorio = false)
     protected Double valorPagoHora;
 
     public Funcionario() {
