@@ -90,3 +90,10 @@ e também será possível visualizar as informações do funcionário.
 
 ![WhatsApp Image 2025-04-22 at 23 15 57](https://github.com/user-attachments/assets/0ea98ec9-445b-4bc4-bcf2-5b33a321705e)
 
+# persistence.xml:
+
+![Capture](https://github.com/user-attachments/assets/39f09e0c-72c4-4158-8075-a4c3d0453dce)
+
+# SLQ Generator:
+
+![Capturre](https://github.com/user-attachments/assets/ee34cb48-a3f0-4ad3-a38d-409d4793ff66)
