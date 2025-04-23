@@ -85,3 +85,8 @@ Compile e execute o programa principal.
 
 Ao cadastrar um novo funcionário, o sistema exibirá a consulta SQL gerada,
 e também será possível visualizar as informações do funcionário.
+
+# pom.xml do projeto:
+
+![WhatsApp Image 2025-04-22 at 23 15 57](https://github.com/user-attachments/assets/0ea98ec9-445b-4bc4-bcf2-5b33a321705e)
+
